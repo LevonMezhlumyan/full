@@ -26,7 +26,7 @@ app.use("/api/posts", PostsRouter);
 app.use("/api/comments", CommentsRouter);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("social-media/dist"));
+  app.use(express.static(__dirname+"social-media/dist"));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "social-media", "dist", "index.html"));
   });
