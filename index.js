@@ -10,11 +10,11 @@ import ShipsRouter from "./routes/Ships.js";
 import CommentsRouter from "./routes/comments.js";
 import path from "path";
 // dotenv.config();
-import { fileURLToPath } from 'url';
+// import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
+// const __filename = fileURLToPath(import.meta.url);
 
-const __dirname = path.dirname(__filename);
+// const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 4545;
@@ -33,7 +33,7 @@ app.use("/api/comments", CommentsRouter);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("social-media/dist"));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "social-media", "dist", "index.html"));
+    res.sendFile(path.resolve("social-media/dist/index.html"));
   });
 }
 
