@@ -9,7 +9,8 @@ import PostsRouter from "./routes/posts.js";
 import ShipsRouter from "./routes/Ships.js";
 import CommentsRouter from "./routes/comments.js";
 import path from "path";
-// dotenv.config();import { fileURLToPath } from 'url';
+// dotenv.config();
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 
