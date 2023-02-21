@@ -9,7 +9,11 @@ import PostsRouter from "./routes/posts.js";
 import ShipsRouter from "./routes/Ships.js";
 import CommentsRouter from "./routes/comments.js";
 import path from "path";
-// dotenv.config();
+// dotenv.config();import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 4545;
