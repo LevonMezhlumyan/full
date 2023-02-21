@@ -24,11 +24,11 @@ app.use("/api/ships", ShipsRouter);
 app.use("/api/likes", LikeRouter);
 app.use("/api/posts", PostsRouter);
 app.use("/api/comments", CommentsRouter);
-
+const curr = path.resolve;
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("social-media/dist"));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(path.resolve, "social-media", "dist", "index.html"));
+    res.sendFile(path.join(curr, "social-media", "dist", "index.html"));
   });
 }
 
