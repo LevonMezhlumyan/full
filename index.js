@@ -28,7 +28,7 @@ app.use("/api/comments", CommentsRouter);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("social-media/dist"));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "social-media", "dist", "index.html"));
+    res.sendFile(path.resolve("social-media", "dist", "index.html"));
   });
 }
 
